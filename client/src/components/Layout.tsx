@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -131,6 +132,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      
+      {/* Floating Chat Widget */}
+      <ChatWidget />
     </div>
   );
 }
