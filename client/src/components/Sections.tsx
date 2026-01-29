@@ -386,7 +386,7 @@ export function Contact() {
                   </div>
                   <span className="font-medium">vaidehideous@gmail.com</span>
                 </a>
-                <a href="https://linkedin.com/in/vaidhideo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/vaidehideo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition-colors">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
                     <Linkedin className="w-5 h-5" />
                   </div>

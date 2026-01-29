@@ -118,7 +118,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <a href="#" className="p-2 bg-secondary/50 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
                 <Github size={20} />
               </a>
-              <a href="#" className="p-2 bg-secondary/50 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+              <a href="https://www.linkedin.com/in/vaidehideo/" className="p-2 bg-secondary/50 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:vaidehideous@gmail.com" className="p-2 bg-secondary/50 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
