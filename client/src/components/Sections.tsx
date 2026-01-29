@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github, Code, Database, Server, Terminal, Calendar, MapPin, GraduationCap, Target, Users, Zap, Layers } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Linkedin, Code, Database, Server, Terminal, Calendar, MapPin, GraduationCap, Target, Users, Zap, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -388,7 +388,7 @@ export function Contact() {
                 </a>
                 <a href="https://linkedin.com/in/vaidhideo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition-colors">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                    <Github className="w-5 h-5" />
+                    <Linkedin className="w-5 h-5" />
                   </div>
                   <span className="font-medium">LinkedIn Profile</span>
                 </a>
