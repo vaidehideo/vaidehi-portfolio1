@@ -1,144 +1,155 @@
-export const resumeData = {
+import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, Globe, Database, Layers, Users, Zap, Target } from "lucide-react";
+
+export const personalInfo = {
   name: "Vaidehi Deo",
-  role: "Senior Software Engineer",
+  title: "Senior Software Engineer",
+  email: "vaidehideo@gmail.com",
   location: "San Jose, CA",
-  contact: {
-    email: "vaidehideo@gmail.com",
-    phone: "(408) 668-5328",
-    linkedin: "linkedin.com/in/vaidhideo",
-    github: "github.com/vaidehideo" // Assumed based on standard pattern, user can update
-  },
-  summary: "Senior Software Engineer with 10+ years building customer-impacting platforms across B2B SaaS, cloud, and enterprise environments. Strongest at end-to-end feature execution, translating ambiguous requirements into shipped functionality, aligning stakeholders, and measuring impact through production signals and metrics. Deep experience in Java backend systems, integrations, and reliable distributed architectures.",
-  skills: {
-    technical: [
-      "Backend Development",
-      "Full-Stack Development",
-      "API Design",
-      "Distributed Systems",
-      "System Integrations",
-      "Data Modeling",
-      "Performance Optimization",
-      "Cloud-Native Architecture",
-      "Agile Development"
-    ],
-    technologies: [
-      "Java",
-      "SQL",
-      "Oracle",
-      "AWS (EC2, S3, SQS, RDS)",
-      "Datadog",
-      "Splunk",
-      "Mixpanel",
-      "GraphQL"
-    ],
-    competencies: [
-      "End-to-End Ownership",
-      "Cross-Functional Collaboration",
-      "Technical Design",
-      "Problem Solving",
-      "Stakeholder Communication",
-      "Reliability Mindset",
-      "Operational Excellence",
-      "Mentorship"
-    ]
-  },
-  experience: [
+  social: [
     {
-      company: "Bill",
-      role: "Senior Software Engineer",
-      period: "Jan 2019 – Present",
-      description: "B2B SMB payments Platform",
-      achievements: [
-        "Owned and delivered product features by building Java services and new/updated APIs, partnering cross-functionally and contributing across the stack on a high-volume payments platform (33M transactions in Q4 FY25)",
-        "Launched an external accounting integration by building an auto-connection flow with retries, idempotency, and robust failure handling, while coordinating across partner teams and internal stakeholders on a platform serving ~494K businesses.",
-        "Led a portfolio of auto-connection enhancements (bank partner extensions, instant auto-connect, third-party billers, production hardening), driving ~10K additional connections per month as the technical point of contact across engineering and stakeholders.",
-        "Reduced time to diagnose production issues to ~30–60 minutes by tracing failures across Datadog and Splunk and validating fixes with Mixpanel, improving release confidence and operational response.",
-        "Improved payment tracking workflow performance under peak load by reducing p95 latency and eliminating slow-query hotspots through targeted Oracle query and data-access optimizations.",
-        "Removed a key scaling blocker for the Invoice Financing product by partnering with IF and Sync teams to resolve a critical invoicing integration issue, enabling an estimated ~$7B TPV growth opportunity."
-      ]
+      name: "GitHub",
+      url: "https://github.com/vaidehideo", // Placeholder, user to update
+      icon: Github,
     },
     {
-      company: "ARM, Inc",
-      role: "Software Engineer",
-      period: "Aug 2016 – Dec 2018",
-      description: "Semiconductor IP (CPU)",
-      achievements: [
-        "Improved internal engineering productivity by developing and enhancing a Django-based platform used by multiple IP development teams.",
-        "Increased platform reliability and usability by owning features end to end, gathering requirements from internal users, implementing enhancements in Python and ExtJS, and iterating based on feedback without disrupting existing workflows."
-      ]
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/vaidehideo/",
+      icon: Linkedin,
     },
     {
-      company: "San Jose State University",
-      role: "Graduate Teaching Assistant",
-      period: "Jan 2016 – May 2016",
-      description: "Distributed Systems Course",
-      achievements: [
-        "Improved course operations and student support by managing discussion forums, clarifying complex distributed-systems concepts, preparing assignments and quizzes, explaining solutions, and grading coursework and exams."
-      ]
+      name: "Email",
+      url: "mailto:vaidehideo@gmail.com",
+      icon: Mail,
     },
-    {
-      company: "AtHoc (BlackBerry)",
-      role: "Software Engineer Intern",
-      period: "Sep 2015 – Dec 2015",
-      description: "Emergency Notification Software",
-      achievements: [
-        "Improved application performance by implementing a caching layer using Aerospike on AWS EC2, reducing latency for high-frequency data access paths.",
-        "Validated a scalable caching strategy by designing and executing a proof of concept using a fast, distributed NoSQL key-value store to support performance-critical workloads."
-      ]
-    },
-    {
-      company: "Amazon Web Services",
-      role: "Software Development Engineer Intern",
-      period: "Jun 2015 – Aug 2015",
-      description: "Cloud Infrastructure",
-      achievements: [
-        "Enabled scalable and accurate billing metering by contributing to snapshot usage metering for the Storage Gateway service.",
-        "Built scalable compute infrastructure in Java to support changes in usage-based billing workflows, improving maintainability and strengthening reliability through automated tests (JUnit, EasyMock)."
-      ]
-    },
-    {
-      company: "HSBC",
-      role: "Software Engineer",
-      period: "Aug 2012 – Jul 2014",
-      description: "Global Banking Technology",
-      achievements: [
-        "Owned Cognos releases and Control-M batch operations for Global Pay Plus reporting, improving test environment reliability (UNIX/schema setup), supporting NA runs, and acting as Defect Prevention Champion to reduce recurring issues."
-      ]
-    }
   ],
-  education: [
-    {
-      degree: "Master of Science in Software Engineering",
-      institution: "San Jose State University",
-      location: "San Jose, CA"
-    },
-    {
-      degree: "Bachelor of Computer Engineering",
-      institution: "University of Pune",
-      location: "India"
-    }
-  ],
-  projects: [
-    {
-      title: "B2B Payment Auto-Connect",
-      description: "Built an auto-connection flow with retries, idempotency, and robust failure handling for external accounting integration.",
-      tech: ["Java", "API Design", "Distributed Systems"],
-      link: "#",
-      repo: "#"
-    },
-    {
-      title: "Performance Optimization Suite",
-      description: "Reduced p95 latency and eliminated slow-query hotspots through targeted Oracle query and data-access optimizations.",
-      tech: ["Oracle", "SQL", "Performance Tuning"],
-      link: "#",
-      repo: "#"
-    },
-    {
-      title: "Internal Eng Productivity Platform",
-      description: "Django-based platform used by multiple IP development teams to improve engineering productivity.",
-      tech: ["Python", "Django", "ExtJS"],
-      link: "#",
-      repo: "#"
-    }
-  ]
 };
+
+export const education = [
+  {
+    school: "San Jose State University",
+    degree: "Master of Science in Software Engineering",
+    location: "San Jose, CA",
+    year: "2016",
+    logo: "/images/sjsu-logo.png" // Placeholder path
+  },
+  {
+    school: "University of Pune",
+    degree: "Bachelor of Computer Engineering",
+    location: "India",
+    year: "2012",
+    logo: "/images/pune-logo.png" // Placeholder path
+  }
+];
+
+export const competencies = [
+  {
+    title: "End-to-End Ownership",
+    description: "Turning ambiguous requirements into shipped functionality. From initial design to production monitoring and impact measurement.",
+    icon: Target
+  },
+  {
+    title: "Cross-Functional Collaboration",
+    description: "Partnering effectively with Product, Design, and other Engineering teams to align on goals and deliver customer value.",
+    icon: Users
+  },
+  {
+    title: "Reliability Mindset",
+    description: "Building systems that scale. Experience with high-volume platforms (33M+ transactions), reducing latency, and improving operational excellence.",
+    icon: Zap
+  },
+  {
+    title: "Technical Leadership",
+    description: "Mentoring junior engineers, driving system refactors, and acting as a technical point of contact for complex integrations.",
+    icon: Layers
+  }
+];
+
+export const experience = [
+  {
+    company: "Bill",
+    role: "Senior Software Engineer",
+    period: "Jan 2019 – Present",
+    description: "Driving features for a B2B payments platform serving ~494K businesses. Specializing in external accounting integrations, system reliability, and performance optimization.",
+    achievements: [
+      "Launched external accounting integration with auto-connection flow, retries, and failure handling.",
+      "Led auto-connection enhancements driving ~10K additional connections per month.",
+      "Reduced production issue diagnosis time to 30-60 minutes via Datadog/Splunk tracing.",
+      "Optimized Oracle queries to reduce p95 latency under peak load.",
+      "Unblocked ~$7B TPV growth opportunity by resolving critical invoicing integration issues."
+    ],
+  },
+  {
+    company: "ARM, Inc",
+    role: "Software Engineer",
+    period: "Aug 2016 – Dec 2018",
+    description: "Improved engineering productivity by developing a Django-based platform for IP development teams.",
+    achievements: [
+      "Enhanced internal platform reliability and usability using Python and ExtJS.",
+      "Owned features end-to-end, gathering requirements and iterating based on user feedback."
+    ],
+  },
+  {
+    company: "AtHoc (BlackBerry)",
+    role: "Software Engineer Intern",
+    period: "Sep 2015 – Dec 2015",
+    description: "Focused on application performance and caching strategies.",
+    achievements: [
+      "Implemented Aerospike caching layer on AWS EC2 to reduce latency.",
+      "Designed proof of concept for distributed NoSQL key-value store."
+    ],
+  },
+  {
+    company: "Amazon Web Services",
+    role: "Software Development Engineer Intern",
+    period: "Jun 2015 – Aug 2015",
+    description: "Contributed to cloud infrastructure and billing systems.",
+    achievements: [
+      "Enabled scalable billing metering for Storage Gateway service.",
+      "Built scalable Java compute infrastructure for usage-based billing."
+    ],
+  },
+  {
+    company: "HSBC",
+    role: "Software Engineer",
+    period: "Aug 2012 – Jul 2014",
+    description: "Managed releases and batch operations for Global Banking Technology.",
+    achievements: [
+      "Owned Cognos releases and Control-M batch operations.",
+      "Acted as Defect Prevention Champion to reduce recurring issues."
+    ],
+  },
+];
+
+export const projects = [
+  {
+    title: "External Accounting Integration",
+    description: "Built a robust auto-connection flow for accounting software integrations. Handled retries, idempotency, and failure scenarios for a platform serving ~494K businesses.",
+    tags: ["Java", "API Design", "Distributed Systems", "Reliability"],
+    link: "#", // Internal project, no public link
+    repo: null,
+  },
+  {
+    title: "Performance Optimization Initiative",
+    description: "Reduced p95 latency and eliminated slow-query hotspots for payment tracking workflows. Optimized Oracle queries and data access patterns under peak load.",
+    tags: ["Oracle", "SQL", "Performance Tuning", "Datadog"],
+    link: "#",
+    repo: null,
+  },
+  {
+    title: "Production Monitoring Suite",
+    description: "Implemented comprehensive tracing and monitoring using Datadog and Splunk. Reduced time to diagnose production issues from hours to 30-60 minutes.",
+    tags: ["Observability", "Splunk", "Datadog", "Mixpanel"],
+    link: "#",
+    repo: null,
+  },
+  // Removed "Internal Eng Productivity Platform" as requested
+];
+
+export const skills = [
+  { name: "Java Backend", icon: Code2, level: 95 },
+  { name: "Distributed Systems", icon: Globe, level: 90 },
+  { name: "API Design", icon: Terminal, level: 90 },
+  { name: "AWS & Cloud", icon: Cpu, level: 85 },
+  { name: "SQL & Oracle", icon: Database, level: 85 },
+  { name: "Observability", icon: Zap, level: 80 },
+];

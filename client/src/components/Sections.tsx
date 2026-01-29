@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github, Code, Database, Server, Layout as LayoutIcon, Terminal } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Code, Database, Server, Terminal, Calendar, MapPin, GraduationCap, Target, Users, Zap, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { resumeData } from "@/lib/data";
+import { experience, projects, skills, education, competencies } from "@/lib/data";
 
 // Animation variants
 const fadeInUp = {
@@ -90,81 +90,139 @@ export function Hero() {
   );
 }
 
+export function Competencies() {
+  return (
+    <section id="competencies" className="py-24 bg-secondary/20">
+      <div className="container">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center">
+            Core Competencies
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {competencies.map((comp, index) => {
+              const Icon = comp.icon;
+              return (
+                <motion.div key={index} variants={fadeInUp}>
+                  <Card className="h-full bg-card/50 hover:bg-card transition-colors border-none shadow-sm hover:shadow-md">
+                    <CardHeader>
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <CardTitle className="text-xl mb-2">{comp.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {comp.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 export function Experience() {
   return (
     <section id="experience" className="py-24 relative">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Experience</h2>
-          <div className="h-1 w-20 bg-primary rounded-full" />
-        </motion.div>
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center">
+            Professional Journey
+          </motion.h2>
 
-        <div className="relative">
-          {/* The Thread */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2 hidden md:block" />
-
-          <div className="space-y-12">
-            {resumeData.experience.map((job, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`flex flex-col md:flex-row gap-8 md:gap-0 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Content Side */}
-                <div className="md:w-1/2 md:px-12">
-                  <Card className="border-none shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 group">
-                    <CardHeader>
-                      <div className="flex justify-between items-start mb-2">
-                        <div>
-                          <CardTitle className="text-2xl font-serif group-hover:text-primary transition-colors">
-                            {job.role}
-                          </CardTitle>
-                          <CardDescription className="text-lg font-medium text-foreground/80 mt-1">
-                            {job.company}
-                          </CardDescription>
-                        </div>
-                        <Badge variant="secondary" className="bg-secondary text-secondary-foreground">
-                          {job.period}
-                        </Badge>
-                      </div>
-                      <p className="text-sm font-medium text-muted-foreground italic">
-                        {job.description}
-                      </p>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {job.achievements.map((achievement, i) => (
-                          <li key={i} className="text-muted-foreground text-sm leading-relaxed flex gap-3">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Timeline Dot Side */}
-                <div className="hidden md:flex md:w-0 justify-center relative">
-                  <div className="w-4 h-4 rounded-full bg-primary border-4 border-background z-10 sticky top-1/2" />
-                </div>
+          <div className="relative border-l-2 border-primary/20 ml-4 md:ml-12 space-y-12">
+            {experience.map((job, index) => (
+              <motion.div key={index} variants={fadeInUp} className="relative pl-8 md:pl-12">
+                {/* Timeline Dot */}
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-background border-2 border-primary" />
                 
-                {/* Empty Side for balance */}
-                <div className="md:w-1/2" />
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">{job.role}</h3>
+                    <div className="text-lg text-primary font-medium mb-1">{job.company}</div>
+                  </div>
+                  <div className="flex items-center text-muted-foreground text-sm font-medium bg-secondary/50 px-3 py-1 rounded-full w-fit">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {job.period}
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground mb-4 leading-relaxed">{job.description}</p>
+                
+                <ul className="space-y-2">
+                  {job.achievements.map((item, i) => (
+                    <li key={i} className="flex items-start text-sm text-muted-foreground">
+                      <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-primary/60 rounded-full flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export function Education() {
+  return (
+    <section id="education" className="py-24 bg-secondary/30">
+      <div className="container">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="max-w-3xl mx-auto"
+        >
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center">
+            Education
+          </motion.h2>
+
+          <div className="grid gap-6">
+            {education.map((edu, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="border-none shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="flex items-center gap-6 p-6">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary">
+                      <GraduationCap className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-1">{edu.school}</h3>
+                      <p className="text-lg text-muted-foreground mb-2">{edu.degree}</p>
+                      <div className="flex items-center text-sm text-muted-foreground/80">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        {edu.location}
+                        <span className="mx-2">•</span>
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {edu.year}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -195,7 +253,7 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {resumeData.projects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -222,7 +280,7 @@ export function Projects() {
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
+                    {project.tags.map((t) => (
                       <Badge key={t} variant="outline" className="border-primary/20 bg-primary/5 text-xs">
                         {t}
                       </Badge>
@@ -248,10 +306,10 @@ export function Projects() {
 
 export function Skills() {
   const categories = [
-    { name: "Languages & Core", icon: <Code />, skills: ["Java", "Python", "SQL", "JavaScript", "HTML/CSS"] },
-    { name: "Backend & Cloud", icon: <Server />, skills: ["Spring Boot", "AWS (EC2, S3, SQS)", "Microservices", "REST APIs", "GraphQL"] },
-    { name: "Data & Infrastructure", icon: <Database />, skills: ["Oracle", "PostgreSQL", "Redis", "Datadog", "Splunk", "Docker"] },
-    { name: "Tools & Methods", icon: <Terminal />, skills: ["Git", "CI/CD", "Agile/Scrum", "JIRA", "Unit Testing", "System Design"] },
+    { name: "Languages & Core", icon: Code, skills: ["Java", "Python", "SQL", "JavaScript", "HTML/CSS"] },
+    { name: "Backend & Cloud", icon: Server, skills: ["Spring Boot", "AWS (EC2, S3, SQS)", "Microservices", "REST APIs", "GraphQL"] },
+    { name: "Data & Infrastructure", icon: Database, skills: ["Oracle", "PostgreSQL", "Redis", "Datadog", "Splunk", "Docker"] },
+    { name: "Tools & Methods", icon: Terminal, skills: ["Git", "CI/CD", "Agile/Scrum", "JIRA", "Unit Testing", "System Design"] },
   ];
 
   return (
@@ -266,37 +324,37 @@ export function Skills() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Technical Proficiency</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit built over a decade of solving complex engineering problems.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Technical Arsenal</h2>
+          <div className="h-1 w-20 bg-primary rounded-full mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((cat, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full border-primary/10 hover:border-primary/30 transition-colors bg-card/80 backdrop-blur-sm">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center text-primary mb-4">
-                    {cat.icon}
+              <Card className="h-full border-none shadow-sm hover:shadow-md transition-shadow bg-card/80 backdrop-blur-sm">
+                <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                    <skill.icon className="w-6 h-6" />
                   </div>
-                  <CardTitle className="font-serif text-xl">{cat.name}</CardTitle>
+                  <CardTitle className="text-lg">{skill.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
-                    {cat.skills.map((skill) => (
-                      <li key={skill} className="flex items-center text-muted-foreground">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mr-2" />
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
+                   {/* Visual bar for skill level */}
+                   <div className="w-full bg-secondary rounded-full h-2 mb-2">
+                     <motion.div 
+                       className="bg-primary h-2 rounded-full" 
+                       initial={{ width: 0 }}
+                       whileInView={{ width: `${skill.level}%` }}
+                       transition={{ duration: 1, delay: 0.5 }}
+                     />
+                   </div>
+                   <div className="text-right text-xs text-muted-foreground">{skill.level}%</div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -307,47 +365,57 @@ export function Skills() {
   );
 }
 
+
 export function Contact() {
   return (
-    <section id="contact" className="py-24 relative text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/contact-bg.jpg" 
-          alt="Contact Background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
-      <div className="container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-serif font-bold mb-6"
-          >
-            Let's build something meaningful.
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-white/80 mb-10"
-          >
-            Always open to discussing new opportunities, technical challenges, or just connecting with fellow engineers.
-          </motion.p>
-          <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ delay: 0.2 }}
-          >
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 rounded-full px-10 h-14 text-lg font-semibold">
-              Get in Touch
-            </Button>
-          </motion.div>
+    <section id="contact" className="py-24 bg-primary/5">
+      <div className="container">
+        <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+          <div className="md:w-1/2 p-12 bg-primary text-primary-foreground relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/images/contact-bg.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-serif font-bold mb-6">Let's Connect</h2>
+              <p className="mb-8 text-primary-foreground/90 leading-relaxed">
+                I'm always open to discussing new opportunities, distributed systems challenges, or just geeking out over tech.
+              </p>
+              
+              <div className="space-y-6">
+                <a href="mailto:vaidehideo@gmail.com" className="flex items-center gap-4 hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                    <ExternalLink className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">vaidehideo@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/vaidhideo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                    <Github className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">LinkedIn Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="md:w-1/2 p-12 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h3>
+            <form className="space-y-4">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm font-medium">Name</label>
+                <input id="name" type="text" className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Your name" />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">Email</label>
+                <input id="email" type="email" className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="your@email.com" />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium">Message</label>
+                <textarea id="message" rows={4} className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Hello..." />
+              </div>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
+                Send Message
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
