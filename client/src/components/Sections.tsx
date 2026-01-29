@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github, Linkedin, Code, Database, Server, Terminal, Calendar, MapPin, GraduationCap, Target, Users, Zap, Layers } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Linkedin, Mail, Code, Database, Server, Terminal, Calendar, MapPin, GraduationCap, Target, Users, Zap, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,8 +62,8 @@ export function Hero() {
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg">
                 View Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-secondary/50 rounded-full px-8 h-12 text-lg">
-                Contact Me
+              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-secondary/50 rounded-full px-8 h-12 text-lg" asChild>
+                <a href="mailto:vaidehideous@gmail.com">Contact Me</a>
               </Button>
             </motion.div>
           </motion.div>
@@ -380,11 +380,11 @@ export function Contact() {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:vaidehideo@gmail.com" className="flex items-center gap-4 hover:text-white transition-colors">
+                <a href="mailto:vaidehideous@gmail.com" className="flex items-center gap-4 hover:text-white transition-colors">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                    <ExternalLink className="w-5 h-5" />
+                    <Mail className="w-5 h-5" />
                   </div>
-                  <span className="font-medium">vaidehideo@gmail.com</span>
+                  <span className="font-medium">vaidehideous@gmail.com</span>
                 </a>
                 <a href="https://linkedin.com/in/vaidhideo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition-colors">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">

@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, Globe, Database
 export const personalInfo = {
   name: "Vaidehi Deo",
   title: "Senior Software Engineer",
-  email: "vaidehideo@gmail.com",
+  email: "vaidehideous@gmail.com",
   location: "San Jose, CA",
   social: [
     {
@@ -18,7 +18,7 @@ export const personalInfo = {
     },
     {
       name: "Email",
-      url: "mailto:vaidehideo@gmail.com",
+      url: "mailto:vaidehideous@gmail.com",
       icon: Mail,
     },
   ],
