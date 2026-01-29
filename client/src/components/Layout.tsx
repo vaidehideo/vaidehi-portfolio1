@@ -47,10 +47,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         )}
       >
         <div className="container flex items-center justify-between">
-          <Link href="/">
-            <a className="text-2xl font-serif font-bold text-foreground tracking-tight hover:text-primary transition-colors">
-              Vaidehi<span className="text-primary">.</span>
-            </a>
+          <Link href="/" className="text-2xl font-serif font-bold text-foreground tracking-tight hover:text-primary transition-colors">
+            Vaidehi<span className="text-primary">.</span>
           </Link>
 
           {/* Desktop Nav */}
