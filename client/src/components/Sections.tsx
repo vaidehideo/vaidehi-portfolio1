@@ -36,8 +36,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="container relative z-10">
-        <div className="max-w-3xl">
+      <div className="container relative z-10 flex items-center gap-12">
+        <div className="max-w-3xl flex-1">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -68,6 +68,23 @@ export function Hero() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Profile Image - Desktop Only */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="hidden lg:block w-[400px] h-[400px] relative z-20"
+        >
+          <div className="absolute inset-0 bg-secondary/30 rounded-full blur-3xl transform translate-y-4" />
+          <div className="relative w-full h-full rounded-full border-4 border-background shadow-2xl overflow-hidden">
+             <img 
+               src="/images/profile-pic.jpg" 
+               alt="Vaidehi Deo" 
+               className="w-full h-full object-cover"
+             />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
