@@ -36,8 +36,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="container relative z-10 flex items-center gap-12">
-        <div className="max-w-3xl flex-1">
+      <div className="container relative z-10 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-12">
+        <div className="max-w-3xl flex-1 text-center lg:text-left">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -58,7 +58,7 @@ export function Hero() {
               10+ years of experience crafting high-volume payment platforms, cloud architectures, and scalable backend solutions.
             </motion.p>
             
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-wrap justify-center lg:justify-start gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg">
                 View Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -69,12 +69,12 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Profile Image - Desktop Only */}
+        {/* Profile Image */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="hidden lg:block w-[400px] h-[400px] relative z-20"
+          className="w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative z-20 flex-shrink-0"
         >
           <div className="absolute inset-0 bg-secondary/30 rounded-full blur-3xl transform translate-y-4" />
           <div className="relative w-full h-full rounded-full border-4 border-background shadow-2xl overflow-hidden">
