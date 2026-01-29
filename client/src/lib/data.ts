@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, Globe, Database, Layers, Users, Zap, Target } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, Globe, Database, Layers, Users, Zap, Target, Puzzle, Gauge } from "lucide-react";
 
 export const personalInfo = {
   name: "Vaidehi Deo",
@@ -152,4 +152,6 @@ export const skills = [
   { name: "AWS & Cloud", icon: Cpu, level: 85 },
   { name: "SQL & Oracle", icon: Database, level: 85 },
   { name: "Observability", icon: Zap, level: 80 },
+  { name: "System Integrations", icon: Puzzle, level: 85 },
+  { name: "Performance Tuning", icon: Gauge, level: 85 },
 ];
