@@ -65,8 +65,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <Button variant="outline" className="ml-4 border-primary/20 hover:border-primary hover:bg-primary/5 text-primary">
-              Resume
+            <Button variant="outline" className="ml-4 border-primary/20 hover:border-primary hover:bg-primary/5 text-primary" asChild>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </Button>
           </nav>
 
@@ -93,8 +93,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {link.name}
             </a>
           ))}
-          <Button className="mt-4" size="lg">
-            Download Resume
+          <Button className="mt-4" size="lg" asChild>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </Button>
         </div>
       )}
