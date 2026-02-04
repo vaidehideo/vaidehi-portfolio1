@@ -29,7 +29,7 @@ export function Hero() {
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-background z-10" />
           <img 
-            src="/images/hero-bg.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663324070802/iCJINZODnprcuhlD.jpg" 
             alt="Abstract Background" 
             className="w-full h-full object-cover opacity-90"
           />
@@ -265,7 +265,7 @@ export function Projects() {
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors z-10" />
                   <img 
-                    src="/images/project-abstract.jpg" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663324070802/HBtqbeHSxQXuVvrc.jpg" 
                     alt="Project Abstract" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
@@ -287,14 +287,6 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="border-t border-border/50 pt-4 flex gap-4">
-                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0">
-                    <Github className="mr-2 h-4 w-4" /> Code
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                  </Button>
-                </CardFooter>
               </Card>
             </motion.div>
           ))}
@@ -372,7 +364,7 @@ export function Contact() {
       <div className="container">
         <div className="max-w-4xl mx-auto bg-card rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
           <div className="md:w-1/2 p-12 bg-primary text-primary-foreground relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/images/contact-bg.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay" />
+            <div className="absolute inset-0 bg-[url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663324070802/TjwoNlbETsZjFHCe.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay" />
             <div className="relative z-10">
               <h2 className="text-3xl font-serif font-bold mb-6">Let's Connect</h2>
               <p className="mb-8 text-primary-foreground/90 leading-relaxed">
