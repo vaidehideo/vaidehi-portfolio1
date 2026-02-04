@@ -18,3 +18,4 @@
 
 ## Pending Changes
 - [x] Remove "Code" and "Live Demo" buttons from Selected Projects section
+- [x] Remove "View Projects" button from hero section

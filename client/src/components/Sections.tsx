@@ -59,9 +59,6 @@ export function Hero() {
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg">
-                View Projects <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
               <Button size="lg" variant="outline" className="border-primary/20 hover:bg-secondary/50 rounded-full px-8 h-12 text-lg" asChild>
                 <a href="mailto:vaidehideous@gmail.com">Contact Me</a>
               </Button>
